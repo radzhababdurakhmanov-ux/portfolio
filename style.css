@@ -112,7 +112,6 @@ nav a:hover {
     margin-bottom: 0.8rem;
 }
 
-/* Двустрочный стильный подзаголовок в Hero */
 .hero-subtext {
     font-size: 1.35rem;
     font-weight: 700;
@@ -293,7 +292,7 @@ nav a:hover {
     color: var(--text-primary);
 }
 
-/* Showreel & 3x4 Video Grid */
+/* Showreel & 2-Column Video Grid */
 .main-vimeo-box {
     width: 100%;
     aspect-ratio: 16/9;
@@ -305,7 +304,7 @@ nav a:hover {
 
 .vimeo-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 столбца */
+    grid-template-columns: repeat(2, 1fr); /* 2 столбца */
     gap: 1.5rem;
 }
 
@@ -319,7 +318,7 @@ nav a:hover {
 }
 
 .vimeo-card:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
     border-color: var(--accent-color);
 }
 
@@ -363,15 +362,14 @@ footer {
 }
 
 /* Mobile & Tablet Responsiveness */
-@media (max-width: 900px) {
-    .vimeo-grid { grid-template-columns: repeat(2, 1fr); } /* 2 столбца на планшетах */
+@media (max-width: 850px) {
     .project-row { grid-template-columns: 1fr; }
     .about-grid { grid-template-columns: 1fr; text-align: center; }
     .about-buttons { justify-content: center; }
 }
 
-@media (max-width: 600px) {
-    .vimeo-grid { grid-template-columns: 1fr; } /* 1 столбец на мобильных */
+@media (max-width: 650px) {
+    .vimeo-grid { grid-template-columns: 1fr; } /* 1 столбец на узких экранах */
     .hero h1 { font-size: 2.3rem; }
     nav ul { gap: 1rem; }
 }
