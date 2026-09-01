@@ -1,30 +1,239 @@
-<!-- Навигация -->
-<header>
-    <nav>
-        <!-- Заменили логин на ваше имя -->
-        <div class="logo">Radjab Abdurakhmanov</div>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radjab Abdurakhmanov — Marketing Creative Producer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<!-- Fullscreen Hero Video Section -->
-<section class="hero">
-    <video autoplay loop muted playsinline class="hero-video">
-        <source src="showreel.mp4" type="video/mp4">
-    </video>
-    <div class="hero-overlay">
-        <!-- Ваше имя как главный заголовок -->
-        <h1>Radjab Abdurakhmanov</h1>
-        <p>Marketing Creative Producer • Midcore Games Specialist & 3D Art Director</p>
-        <div class="hero-buttons">
-            <a href="#projects" class="btn">View Projects</a>
-            <a href="#contact" class="btn btn-alt">Contact Me</a>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <div class="logo">Radjab Abdurakhmanov</div>
+            <ul>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#projects">My Projects</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Fullscreen Video Hero Section -->
+    <section id="home" class="hero">
+        <video autoplay loop muted playsinline class="hero-video">
+            <source src="showreel.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="hero-overlay">
+            <h1>Radjab Abdurakhmanov</h1>
+            <p>Marketing Creative Producer focused on successful midcore games</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn">View Projects</a>
+                <a href="#contact" class="btn btn-alt">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="container">
+        <div class="about-grid">
+            <div class="avatar-box">
+                <img src="avatar.png" alt="Radjab Abdurakhmanov" class="avatar-img">
+            </div>
+            <div class="about-content">
+                <div class="badge">Mobile Games • Midcore Specialist</div>
+                <h2>Creative Producer bridging data-driven hypotheses and high-performing visuals</h2>
+                <p>
+                    Hi, my name is Radjab. I specialize in driving user acquisition for mobile games through end-to-end creative production. My expertise spans market intelligence, UA performance analytics (CTR, IPM, ROAS), 3D art direction, and pipeline optimization.
+                </p>
+                <div class="hero-buttons" style="justify-content: flex-start; margin-top: 1.5rem;">
+                    <a href="#projects" class="btn">View Projects</a>
+                    <a href="#contact" class="btn btn-alt">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Midcore Projects Section -->
+    <section id="projects" class="container">
+        <h2>Midcore Projects</h2>
+        <p class="section-subtitle">Core titles I work on</p>
+
+        <div class="grid">
+            <div class="card">
+                <a href="https://apps.apple.com/us/app/world-war-heroes-ww2-fps-pvp/id1281535229" target="_blank" rel="noopener">
+                    <img src="wwh.jpg" alt="World War Heroes">
+                </a>
+                <h3>World War Heroes — WW2 PvP FPS</h3>
+                <p>Developed and tested scalable video concepts that outperformed historical benchmarks and boosted global UA ad spend.</p>
+            </div>
+
+            <div class="card">
+                <a href="https://apps.apple.com/us/app/modern-strike-online-pvp-fps/id1197441480" target="_blank" rel="noopener">
+                    <img src="mso.jpg" alt="Modern Strike Online">
+                </a>
+                <h3>Modern Strike Online — PvP Shooter</h3>
+                <p>Produced performance ad iterations, tested visual hooks and meta-mechanics to drive user acquisition efficiency.</p>
+            </div>
+
+            <div class="card">
+                <a href="https://apps.apple.com/us/app/railroad-empire/id1500000000" target="_blank" rel="noopener">
+                    <img src="rre.jpg" alt="Railroad Empire">
+                </a>
+                <h3>Railroad Empire — Train Tycoon</h3>
+                <p>Produced a flagship Playable Ad that became a major UA growth driver; co-developed unified visual guidelines.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Creatives & Showreel Showcase Section -->
+    <section id="videos" class="container">
+        <h2>Showreel & Top Creatives</h2>
+        <p class="section-subtitle">Interactive showcase of high-performing marketing assets</p>
+
+        <div class="grid video-grid">
+            <div class="card video-card" onclick="openModal('showreel.mp4')">
+                <div class="play-icon">▶</div>
+                <h3>2026 Showreel</h3>
+                <p>Featured Production Reel</p>
+            </div>
+            <div class="card video-card" onclick="openModal('top_creative_1.mp4')">
+                <div class="play-icon">▶</div>
+                <h3>World War Heroes</h3>
+                <p>Gameplay / Action Hook</p>
+            </div>
+            <div class="card video-card" onclick="openModal('top_creative_2.mp4')">
+                <div class="play-icon">▶</div>
+                <h3>Railroad Empire</h3>
+                <p>Flagship Playable / Video</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Video Popup -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <video id="modalVideo" controls autoplay muted>
+                <source src="" type="video/mp4">
+            </video>
         </div>
     </div>
-</section>
+
+    <!-- Skills & Expertise Section -->
+    <section id="skills" class="container">
+        <h2>Skills & Expertise</h2>
+        <p class="section-subtitle">Areas of specialization in creative marketing production</p>
+
+        <div class="grid-2col">
+            <div class="skill-box">
+                <h3>Creative Production Management</h3>
+                <ul>
+                    <li>End-to-end production: Gameplay videos, UGC, CGI trailers, static assets, and Playable Ads.</li>
+                    <li>Generative AI integration (Midjourney, Stable Diffusion) for rapid pre-visualization and briefing.</li>
+                    <li>Managing cross-functional teams (2D/3D artists, animators, Unity/UE5 developers, sound designers).</li>
+                    <li>Structuring ideation frameworks and targeted brainstorming sessions.</li>
+                </ul>
+            </div>
+
+            <div class="skill-box">
+                <h3>Performance Marketing & Analytics</h3>
+                <ul>
+                    <li>Deep understanding of key metrics: CTR, IPM, CPI, Retention D7, and ROAS.</li>
+                    <li>Hands-on analysis using Luna, AppsFlyer, Smartlook, Sensor Tower, and AppMagic.</li>
+                    <li>Market intelligence, competitor benchmarking, and trends analysis.</li>
+                    <li>Data-driven A/B testing and iterative optimization of hero creatives.</li>
+                </ul>
+            </div>
+
+            <div class="skill-box">
+                <h3>Technical & Engines</h3>
+                <ul>
+                    <li>Advanced proficiency in Adobe Creative Cloud (After Effects, Photoshop) and Figma.</li>
+                    <li>Practical experience in Unity & Unreal Engine 5 (scene setup, cameras, gameplay capture).</li>
+                    <li>Ad network spec alignment (Google UAC, Facebook, TikTok, Unity LevelPlay).</li>
+                </ul>
+            </div>
+
+            <div class="skill-box">
+                <h3>Process & Soft Skills</h3>
+                <ul>
+                    <li>Workflow optimization, task management in Asana, and sprint planning.</li>
+                    <li>Building centralized knowledge bases and visual guidelines in Notion & Miro.</li>
+                    <li>Clear cross-departmental communication between Marketing, Product, and Art pods.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="container">
+        <h2>Experience</h2>
+        <p class="section-subtitle">Professional background in mobile games and motion production</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h3>🎯 Marketing Creative Producer</h3>
+                    <span class="date">Present</span>
+                </div>
+                <div class="company">Azur Games</div>
+                <p>Orchestrating creative strategy and A/B testing roadmaps for midcore titles (*World War Heroes*, *Modern Strike Online*, *Railroad Empire*). Managing production pipelines, scaling UA spend, and implementing Generative AI workflows.</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h3>🚀 Marketing Creator</h3>
+                    <span class="date">Previous Role</span>
+                </div>
+                <div class="company">Azur Games</div>
+                <p>Led data-driven creative production for casual and midcore portfolios, managing the lifecycle from trend analysis and concepting to mass production and performance optimization.</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <h3>📱 Lead Creative Motion Designer</h3>
+                    <span class="date">Previous Role</span>
+                </div>
+                <div class="company">Game Studio</div>
+                <p>Spearheaded 3D/2D motion design pipelines, established art direction standards, mentored motion designers, and delivered high-converting trailers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get In Touch Section -->
+    <section id="contact" class="container">
+        <h2>Get In Touch</h2>
+        <p class="section-subtitle">Let's craft and execute high-performing marketing strategies for your games!</p>
+
+        <div class="contact-grid">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=your_email@gmail.com&su=Game%20Project%20Inquiry&body=Hello%20Radjab!%20I%20would%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noopener" class="contact-card">
+                <div class="contact-icon">✉</div>
+                <div>
+                    <h3>Email</h3>
+                    <p>your_email@gmail.com</p>
+                </div>
+            </a>
+
+            <a href="https://t.me/your_telegram" target="_blank" rel="noopener" class="contact-card">
+                <div class="contact-icon">✈</div>
+                <div>
+                    <h3>Telegram</h3>
+                    <p>@your_telegram</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Radjab Abdurakhmanov. Creative Producer. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
