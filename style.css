@@ -373,3 +373,18 @@ footer {
     .hero h1 { font-size: 2.3rem; }
     nav ul { gap: 1rem; }
 }
+/* Telegram Icon styling */
+.telegram-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+}
+
+.telegram-icon svg {
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover .telegram-icon svg {
+    transform: scale(1.1);
+}
